@@ -1,327 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>The Swift Family</title>
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Swift Family</title>
 
-    <style>
+        <style>
 
-        @font-face {
-                font-family: "DistantGalaxy";
-                src: url('DistantGalaxy.ttf');
-            }
+         @font-face {
+             font-family: "DistantGalaxy";
+             src: url('DistantGalaxy.ttf');
+         }
 
-        @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+         @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-        * {
-            padding: 0;
-            margin: 0;
-        }
+         * {
+             padding: 0;
+             margin: 0;
+         }
 
-        #disable-scrolling {
-            display:none;
-        }
+         #disable-scrolling {
+             display:none;
+         }
 
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-            font-family: "Droid Sans", arial, verdana, sans-serif;
-            font-weight: 700;
-            color: #ff6;
-            background-color: #000;
-        }
+         body,
+         html {
+             width: 100%;
+             height: 100%;
+             font-family: "Droid Sans", arial, verdana, sans-serif;
+             font-weight: 700;
+             color: #ff6;
+             background-color: #000;
+         }
 
-        h1 {
-                font-family: "DistantGalaxy";
-                position: absolute;
-                width: 2.6em;
-                left: 50%;
-                top: 60%;
-                font-size: 5em;
-                text-align: center;
-                margin-left: -1.6em;
-                line-height: 0.8em;
-                color: #000;
-                text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
-            }
-
-
-            h1 sub {
-                display: block;
-                font-size: 0.3em;
-                letter-spacing: 0;
-                line-height: 1em;
-            }
-
-            img {
-                width: 95%;
-                padding: 5% 2.5%;
-            }
-
-            #titles {
-                width: 16em;
-                font-size: 350%;
-                text-align: justify;
-                padding-bottom: 10px;
-            }
-
-            #titles p.center {
-                text-align: center;
-            }
-
-            #titles p {
-                text-align: justify;
-                margin: 0.8em 0;
-            }
-
-        @media only screen and (min-width: 1024px) {
-            body,
-            html {
-                overflow: hidden;
-            }
-
-            h1 {
-                top: 25%;
-                font-size: 10em;
-                opacity: 0;
-                z-index: 1;
-                -webkit-animation: logo 8s ease-out;
-                -moz-animation: logo 8s ease-out;
-                -ms-animation: logo 8s ease-out;
-                -o-animation: logo 8s ease-out;
-                animation: logo 8s ease-out;
-            }
+         h1 {
+             font-family: "DistantGalaxy";
+             position: absolute;
+             width: 2.6em;
+             left: 50%;
+             top: 60%;
+             font-size: 5em;
+             text-align: center;
+             margin-left: -1.6em;
+             line-height: 0.8em;
+             color: #000;
+             text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+         }
 
 
-            @-webkit-keyframes logo {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    -webkit-transform: scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    -webkit-transform: scale(0.1);
-                    opacity: 0;
-                }
-            }
+         h1 sub {
+             display: block;
+             font-size: 0.3em;
+             letter-spacing: 0;
+             line-height: 1em;
+         }
 
-            @-moz-keyframes logo {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    -moz-transform: scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    -moz-transform: scale(0.1);
-                    opacity: 0;
-                }
-            }
+         img {
+             width: 95%;
+             padding: 5% 2.5%;
+         }
 
-            @-ms-keyframes logo {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    -ms-transform: scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    -ms-transform: scale(0.1);
-                    opacity: 0;
-                }
-            }
+         #titles {
+             width: 16em;
+             font-size: 350%;
+             text-align: justify;
+             padding-bottom: 10px;
+         }
 
-            @-o-keyframes logo {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    -o-transform: scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    -o-transform: scale(0.1);
-                    opacity: 0;
-                }
-            }
-            @keyframes logo {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scale(0.1);
-                    opacity: 0;
-                }
-            }
+         #titles p.center {
+             text-align: center;
+         }
 
-            /* the interesting 3D scrolling stuff */
+         #titles p {
+             text-align: justify;
+             margin: 0.8em 0;
+         }
 
-            #titles {
-                position: absolute;
-                width: 16em;
-                height: 50em;
-                bottom: 0;
-                left: 35%;
-                margin-left: -8em;
-                font-size: 350%;
-                text-align: justify;
-                overflow: hidden;
-                -webkit-transform-origin: 50% 100%;
-                -moz-transform-origin: 50% 100%;
-                -ms-transform-origin: 50% 100%;
-                -o-transform-origin: 50% 100%;
-                transform-origin: 50% 100%;
-                -webkit-transform: perspective(300px) rotateX(25deg);
-                -moz-transform: perspective(300px) rotateX(25deg);
-                -ms-transform: perspective(300px) rotateX(25deg);
-                -o-transform: perspective(300px) rotateX(25deg);
-                transform: perspective(300px) rotateX(25deg);
-            }
+         @media only screen and (min-width: 1024px) {
+             body,
+             html {
+                 overflow: hidden;
+             }
 
-            #titles:after {
-                position: absolute;
-                content: ' ';
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 60%;
-                background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-                background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-                background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-                background-image: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-                background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
-                pointer-events: none;
-            }
+             h1 {
+                 top: 25%;
+                 font-size: 10em;
+                 opacity: 0;
+                 z-index: 1;
+                 -webkit-animation: logo 8s ease-out;
+                 -moz-animation: logo 8s ease-out;
+                 -ms-animation: logo 8s ease-out;
+                 -o-animation: logo 8s ease-out;
+                 animation: logo 8s ease-out;
+             }
 
-            #titles a {
-                color: #ff6;
-                text-decoration: underline;
-            }
 
-            #titlecontent {
-                position: absolute;
-                top: 100%;
-                -webkit-animation: scroll 100s linear 4s infinite;
-                -moz-animation: scroll 100s linear 4s infinite;
-                -ms-animation: scroll 100s linear 4s infinite;
-                -o-animation: scroll 100s linear 4s infinite;
-                animation: scroll 100s linear 4s infinite;
-            }
-            /* animation */
+             @-webkit-keyframes logo {
+                 0% {
+                     opacity: 1;
+                 }
+                 50% {
+                     -webkit-transform: scale(1);
+                     opacity: 1;
+                 }
+                 100% {
+                     -webkit-transform: scale(0.1);
+                     opacity: 0;
+                 }
+             }
 
-            @-webkit-keyframes scroll {
-                0% {
-                    top: 100%;
-                }
-                100% {
-                    top: -170%;
-                }
-            }
+             @-moz-keyframes logo {
+                 0% {
+                     opacity: 1;
+                 }
+                 50% {
+                     -moz-transform: scale(1);
+                     opacity: 1;
+                 }
+                 100% {
+                     -moz-transform: scale(0.1);
+                     opacity: 0;
+                 }
+             }
 
-            @-moz-keyframes scroll {
-                0% {
-                    top: 100%;
-                }
-                100% {
-                    top: -170%;
-                }
-            }
+             @-ms-keyframes logo {
+                 0% {
+                     opacity: 1;
+                 }
+                 50% {
+                     -ms-transform: scale(1);
+                     opacity: 1;
+                 }
+                 100% {
+                     -ms-transform: scale(0.1);
+                     opacity: 0;
+                 }
+             }
 
-            @-ms-keyframes scroll {
-                0% {
-                    top: 100%;
-                }
-                100% {
-                    top: -170%;
-                }
-            }
+             @-o-keyframes logo {
+                 0% {
+                     opacity: 1;
+                 }
+                 50% {
+                     -o-transform: scale(1);
+                     opacity: 1;
+                 }
+                 100% {
+                     -o-transform: scale(0.1);
+                     opacity: 0;
+                 }
+             }
+             @keyframes logo {
+                 0% {
+                     opacity: 1;
+                 }
+                 50% {
+                     transform: scale(1);
+                     opacity: 1;
+                 }
+                 100% {
+                     transform: scale(0.1);
+                     opacity: 0;
+                 }
+             }
 
-            @-o-keyframes scroll {
-                0% {
-                    top: 100%;
-                }
-                100% {
-                    top: -170%;
-                }
-            }
+             /* the interesting 3D scrolling stuff */
 
-            @keyframes scroll {
-                0% {
-                    top: 100%;
-                }
-                100% {
-                    top: -170%;
-                }
-            }
+             #titles {
+                 position: absolute;
+                 width: 16em;
+                 height: 50em;
+                 bottom: 0;
+                 left: 35%;
+                 margin-left: -8em;
+                 font-size: 350%;
+                 text-align: justify;
+                 overflow: hidden;
+                 -webkit-transform-origin: 50% 100%;
+                 -moz-transform-origin: 50% 100%;
+                 -ms-transform-origin: 50% 100%;
+                 -o-transform-origin: 50% 100%;
+                 transform-origin: 50% 100%;
+                 -webkit-transform: perspective(300px) rotateX(25deg);
+                 -moz-transform: perspective(300px) rotateX(25deg);
+                 -ms-transform: perspective(300px) rotateX(25deg);
+                 -o-transform: perspective(300px) rotateX(25deg);
+                 transform: perspective(300px) rotateX(25deg);
+             }
 
-            img {
-                float: right;
-                padding-right: 5%;
-                padding-top: 5%;
-                max-height: 80%;
-                width: auto;
-                margin: auto;
-                animation: img-in 8s ease;
-            }
+             #titles:after {
+                 position: absolute;
+                 content: ' ';
+                 left: 0;
+                 right: 0;
+                 top: 0;
+                 bottom: 60%;
+                 background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+                 background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+                 background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+                 background-image: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+                 background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+                 pointer-events: none;
+             }
 
-            @keyframes img-in {
-                0% {
-                    opacity: 0;
-                }
-                80% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="stars.css">
+             #titles a {
+                 color: #ff6;
+                 text-decoration: underline;
+             }
 
-</head>
+             #titlecontent {
+                 position: absolute;
+                 top: 100%;
+                 -webkit-animation: scroll 100s linear 4s infinite;
+                 -moz-animation: scroll 100s linear 4s infinite;
+                 -ms-animation: scroll 100s linear 4s infinite;
+                 -o-animation: scroll 100s linear 4s infinite;
+                 animation: scroll 100s linear 4s infinite;
+             }
+             /* animation */
 
-<body>
-    <h1><sub>the</sub>SWIFT FAMILY</h1>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
+             @-webkit-keyframes scroll {
+                 0% {
+                     top: 100%;
+                 }
+                 100% {
+                     top: -170%;
+                 }
+             }
 
-    <img src="/FamilyPortrait.jpg">
-    <div id="titles">
-        <div id="titlecontent">
+             @-moz-keyframes scroll {
+                 0% {
+                     top: 100%;
+                 }
+                 100% {
+                     top: -170%;
+                 }
+             }
 
-            <p class="center">EPISODE MMXVII<br /></p>
+             @-ms-keyframes scroll {
+                 0% {
+                     top: 100%;
+                 }
+                 100% {
+                     top: -170%;
+                 }
+             }
 
-            <p>It is a period of great change at the Swift house.</p>
+             @-o-keyframes scroll {
+                 0% {
+                     top: 100%;
+                 }
+                 100% {
+                     top: -170%;
+                 }
+             }
 
-            <p>Isaac is beginning his junior year at GSL High School; he's running cross country and looking forward to leading the programming section on the school's Robotics team in the winter.</p>
+             @keyframes scroll {
+                 0% {
+                     top: 100%;
+                 }
+                 100% {
+                     top: -170%;
+                 }
+             }
 
-            <p>Robin has started her freshman year at Montana State (Bozeman), where she's pursuing a degree in nursing. She's really enjoying the hiking and other outdoor opportunities that she's been offered.</p>
+             img {
+                 float: right;
+                 padding-right: 5%;
+                 padding-top: 5%;
+                 max-height: 80%;
+                 width: auto;
+                 margin: auto;
+                 animation: img-in 8s ease;
+             }
 
-            <p>After spending the summer interning with Lockheed Martin in Fort Worth, Texas, Chandler is enjoying the coolness of the Minnesota fall again. He's busy spending his time designing silly scrolling websites and doing terrible photoshop work (and also keeping busy with the usual many projects!)<!-- TODO: document projects --></p>
+             @keyframes img-in {
+                 0% {
+                     opacity: 0;
+                 }
+                 80% {
+                     opacity: 0;
+                 }
+                 100% {
+                     opacity: 1;
+                 }
+             }
+         }
+        </style>
+        <link rel="stylesheet" href="stars.css">
 
-            <p>Dave and Celine are enjoying the peace and quiet that comes with the majority of the kids moved out.</p>
+    </head>
 
+    <body>
+        <h1><sub>the</sub>SWIFT FAMILY</h1>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+
+        <img src="/FamilyPortrait.jpg">
+        <div id="titles">
+            <div id="titlecontent">
+
+                <p class="center">EPISODE MMXVII<br /></p>
+
+                <p>It is a period of great change at the Swift house.</p>
+
+                <p>Isaac is beginning his junior year at GSL High School; he's running cross country and looking forward to leading the programming section on the school's Robotics team in the winter.</p>
+
+                <p>Robin has started her freshman year at Montana State (Bozeman), where she's pursuing a degree in nursing. She's really enjoying the hiking and other outdoor opportunities that she's been offered.</p>
+
+                <p>After spending the summer interning with Lockheed Martin in Fort Worth, Texas, Chandler is enjoying the coolness of the Minnesota fall again. He's busy spending his time designing silly scrolling websites and doing terrible photoshop work (and also keeping busy with the usual many projects!)<!-- TODO: document projects --></p>
+
+                <p>Dave and Celine are enjoying the peace and quiet that comes with the majority of the kids moved out.</p>
+
+            </div>
         </div>
-    </div>
-    <div id="disable-scrolling">
-         <!-- TODO: Disable Text Scrolling -->
-    </div>
-    <div id="links">
-        <!-- TODO: links -->
-    </div>
+        <div id="disable-scrolling">
+            <!-- TODO: Disable Text Scrolling -->
+        </div>
+        <div id="links">
+            <!-- TODO: links -->
+        </div>
 
-</body>
+    </body>
 
 </html>
